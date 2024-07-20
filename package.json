@@ -1,0 +1,43 @@
+{
+  "name": "umbra-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.ts",
+  "scripts": {
+    "start:dev": "nodemon -r ./src/openapi/index.ts ./src/server.ts",
+    "build": "tsc -p .",
+    "start:prod": "./dist/server.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "./*.json"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "axios-case-converter": "^1.1.1",
+    "bottleneck": "^2.19.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "geojson-validation": "^1.0.2",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0",
+    "zod": "^3.23.8",
+    "zod-openapi": "^2.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/geojson": "^7946.0.14",
+    "@types/geojson-validation": "^1.0.3",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.10",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "ts-to-zod": "^3.8.7",
+    "typescript": "^5.4.5"
+  }
+}
